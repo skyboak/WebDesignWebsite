@@ -1,0 +1,61 @@
+#text {
+    position: fixed;
+    top: 6vh;
+    left: 6vw;
+    width: 45vw;
+
+}
+
+
+#buttoncontainer {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#nextButton {
+    position: fixed;
+    left: 7vw;
+    bottom: 8vh;
+    height: 5vh;
+    width: 7vw;
+}
+#nextButton:hover {
+    animation: shake 0.5s infinite;
+}
+
+
+#fooditems {
+    position: fixed;
+    right: 0vw;
+    bottom: 4vh;
+    height: 60%;
+    width: 50%;
+    animation: floatY 1.5s ease-in-out infinite;
+}
+
+#fooditems img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 0.4s ease-in-out; /* Add transition to the images */
+}
+
+#topImage {
+    opacity: 1;
+    z-index: 1; /* Ensure topImage is above the bottom image */
+}
+
+#bottomImage {
+    opacity: 0; /* Hide the bottom image initially */
+    z-index: 0; /* Ensure bottomImage is below the top image */
+}
+
+#fooditems:hover #topImage {
+    opacity: 0;
+}
+
+#fooditems:hover #bottomImage {
+    opacity: 1;
+}

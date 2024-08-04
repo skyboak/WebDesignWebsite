@@ -1,0 +1,34 @@
+#foodtopoop {
+    position: relative;
+    left: 13vw;
+    top: 17vh;
+    height: 60vh;
+    width: 34vw;
+}
+
+#fooditems {
+    position: fixed;
+    right: -5vw;
+    top: -12vh;
+    height: 130%;
+    animation: float 1.5s ease-in-out infinite;
+}
+
+#button {
+    position: fixed;
+    left: 14vw;
+    bottom: 10vh;
+    height: 6vh;
+    width: 16vw;
+}
+
+#button:hover {
+    animation: shake 0.5s infinite;
+}
+
+#buttoncontainer {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
