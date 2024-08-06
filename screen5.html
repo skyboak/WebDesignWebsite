@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food2Poop</title>
+    <link rel="stylesheet" href="screen5.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <img id="text" src="/assets/screen5/text.png" alt="title">
+     <img id="poopleft" src="/assets/screen5/poopleft.png" alt="poopleft">
+    <img id="poopright" src="/assets/screen5/poopright.png" alt="poopright">
+    <img id="toilet" src="/assets/screen5/toilet.png" alt="toilet" onclick="playFlushSound()">
+     <button class="buttoncontainer" id="screen5button">
+         <img id="nextButton" src="/assets/screen2/nextButton.png" alt="nextButton">
+    </button>
+    <img id="pageIndicator" src="/assets/screen5/pageIndicator.png" alt="pageIndicator">
+     <audio id="hoverSound" src="/assets/silence.mp3" preload="auto"></audio>
+     <audio id="flushSound" src="/assets/flush.mp3" preload="auto"></audio>
+     <script src="script.js"></script>
+     <script>
+        function playFlushSound() {
+            const flushSound = document.getElementById('flushSound');
+            flushSound.play();
+        }
+    </script>
+</body>
+</html>

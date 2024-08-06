@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Determine which button was clicked and set the target page
             if (target.id === 'screen1button') {
+                targetPage = 'screen2.html';
                 console.log("screen1button clicked");
                 } else if (target.id === 'screen2button') {
                     console.log("screen2button clicked");
@@ -34,12 +35,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else if (target.id === 'screen3button') {
                     console.log("button3 clicked");
                     targetPage = 'screen4.html';
-                } else if (target.id === 'screen4button') {
-                    console.log("screen4button clicked");
-                    targetPage = 'screen5.html';
-                } else if (target.id === 'screen5button') {
-                    console.log("screen5button clicked");
-                    targetPage = 'screen6.html';
+                    } else if (target.id === 'screen4button') {
+                        console.log("screen4button clicked");
+                        targetPage = 'screen5.html';
+                    } else if (target.id === 'screen5button') {
+                        targetPage = 'screen6.html';
+                        console.log("screen5button clicked");
+                        } else if (target.id === 'screen6button') {
+                            console.log("screen6button clicked");
+                            targetPage = 'screen7.html';
+                        } else if (target.id === 'screen7button') {
+                            console.log("screen7button clicked");
+                            targetPage = 'screen1.html';
+                        
                 
             } else {
                 console.log("Unrecognized button clicked");

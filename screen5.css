@@ -1,0 +1,39 @@
+#text {
+    position: fixed;
+    top: 6vh;
+    left: 6vw;
+    width: 45vw;
+}
+
+#nextButton {
+    position: fixed;
+    left: 7vw;
+    bottom: 8vh;
+    height: 5vh;
+    width: 7vw;
+}
+
+#nextButton:hover {
+    animation: shake 0.5s infinite;
+}
+
+#poopright{
+    position: fixed;
+    top: 0;
+    right: -5vw;
+    width: 27%;
+    animation: float 2s infinite;
+}
+#poopleft{
+    position: fixed;
+    bottom: 9vh;
+    left: 0;
+    width: 25%;
+    animation: float 2s infinite;
+}
+#toilet{
+    position: fixed;
+    bottom: 0;
+    right: 10vw;
+    width: 34%;
+}

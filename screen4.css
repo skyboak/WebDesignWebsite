@@ -17,7 +17,45 @@
     animation: shake 0.5s infinite;
 }
 
-#circles {
-    display: flex;
-    flex-direction: row;
+#line{
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+}
+
+
+.circle {
+    position: fixed;
+    width: 10vw; /* Adjust the width as needed */
+    height: 10vw; /* Ensure the circle is proportional */
+
+}
+#circle1{
+    top: 49vh;
+    left: 7vw;
+}
+#circle2{
+    top: 61vh;
+    left: 30vw;
+}
+#circle3{
+    top: 31vh;
+    left: 43vw;
+}
+.circle img{
+    width: 100%;
+}
+
+
+.bottomImage{
+    display: none;
+}
+
+#creatures{
+    position: fixed;
+    top: 23vh;
+    right: 7vw;
+    width: 30%;
 }

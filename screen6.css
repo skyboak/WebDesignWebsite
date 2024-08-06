@@ -1,0 +1,39 @@
+#text {
+    position: fixed;
+    top: 6vh;
+    left: 6vw;
+    width: 45vw;
+}
+
+#nextButton {
+    position: fixed;
+    left: 7vw;
+    bottom: 8vh;
+    height: 5vh;
+    width: 7vw;
+}
+
+#nextButton:hover {
+    animation: shake 0.5s infinite;
+}
+
+
+#leftfood{
+    position: fixed;
+    top: 43vh;
+    left: 16vw;
+    width: 20%;
+}
+#rightfood{
+    position: fixed;
+    top: 18vh;
+    right: 15vw;
+    width: 20%;
+
+}
+#youtube{
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

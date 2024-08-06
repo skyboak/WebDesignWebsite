@@ -9,43 +9,70 @@
 </head>
 <body>
 
-     <img id="text" src="/assets/screen4/text.png" alt="title">
-     <div id="circles">
-        <div class="circle" id="circle1"></div>
-            <img class="topImage" src="/assets/screen4/click.png" alt="food">
-            <img class="bottomImage" src="/assets/screen4/circletext1.png" alt="foodhover">
-        </div>
-        <div class="circle" id="circle2"></div>
-            <img class="topImage" src="/assets/screen4/click.png" alt="food">
-            <img class="bottomImage" src="/assets/screen4/circletext2.png" alt="foodhover">
-        </div>
-        <div class="circle" id="circle3"></div>
-            <img class="topImage" src="/assets/screen4/click.png" alt="food">
-            <img class="bottomImage" src="/assets/screen4/circletext3.png" alt="foodhover">
-        </div>
+    <img id="text" src="/assets/screen4/text.png" alt="title">
+    <img id="line" src="/assets/screen4/line.png" alt="line">
+    <img id="creatures" src="/assets/screen4/creatureleft.png" alt="creatures">
+    <div class="circle" id="circle1">
+        <img class="topImage" src="/assets/screen4/click.png" alt="food">
+        <img class="bottomImage" src="/assets/screen4/circletext1.png" alt="foodhover">
     </div>
-     <button class="buttoncontainer" id="screen4button">
-         <img id="nextButton" src="/assets/screen2/nextButton.png" alt="nextButton">
+    
+    <div class="circle" id="circle2">
+        <img class="topImage" src="/assets/screen4/click.png" alt="food">
+        <img class="bottomImage" src="/assets/screen4/circletext2.png" alt="foodhover">
+    </div>
+    
+    <div class="circle" id="circle3">
+        <img class="topImage" src="/assets/screen4/click.png" alt="food">
+        <img class="bottomImage" src="/assets/screen4/circletext3.png" alt="foodhover">
+    </div>
+
+    <button class="buttoncontainer" id="screen4button">
+        <img id="nextButton" src="/assets/screen2/nextButton.png" alt="nextButton">
     </button>
+    
     <img id="pageIndicator" src="/assets/screen4/pageIndicator.png" alt="pageIndicator">
+    
     <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const topImages = document.querySelectorAll('.topImage');
-            const bottomImages = document.querySelectorAll('.bottomImage');
-
-            topImages.forEach((topImage, index) => {
-                topImage.addEventListener('click', function() {
-                    topImage.style.display = 'none';
-                    if (bottomImages[index]) {
-                        bottomImages[index].style.display = 'block';
+            document.querySelectorAll('.circle').forEach(circle => {
+                circle.addEventListener('click', () => {
+                    console.log('Circle clicked:', circle);
+                    
+                    const bottomImage = circle.querySelector('.bottomImage');
+                    if (bottomImage) {
+                        console.log('Bottom image found:', bottomImage);
+                        bottomImage.style.display = 'block';
+                    } else {
+                        console.log('Bottom image not found');
+                    }
+    
+                    const topImage = circle.querySelector('.topImage');
+                    if (topImage) {
+                        console.log('Top image found:', topImage);
+                        topImage.style.display = 'none';
+                    } else {
+                        console.log('Top image not found');
                     }
                 });
             });
+            // Animation for the creatures image
+            const creaturesImage = document.getElementById('creatures');
+            const images = [
+                '/assets/screen4/creatureleft.png',
+                '/assets/screen4/creatureright.png'
+            ];
+            let currentIndex = 0;
+
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                creaturesImage.src = images[currentIndex];
+            }, 700); // Change image every 1 second
         });
-        </script>
+    </script>
+    
     <audio id="hoverSound" src="/assets/silence.mp3" preload="auto"></audio>
 
-     
 </body>
 </html>
