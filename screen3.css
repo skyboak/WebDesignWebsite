@@ -1,0 +1,17 @@
+#text {
+    position: fixed;
+    top: 6vh;
+    left: 6vw;
+    width: 45vw;
+
+}
+#nextButton {
+    position: fixed;
+    left: 7vw;
+    bottom: 8vh;
+    height: 5vh;
+    width: 7vw;
+}
+#nextButton:hover {
+    animation: shake 0.5s infinite;
+}
