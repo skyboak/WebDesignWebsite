@@ -4,21 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food2Poop</title>
-    <link rel="stylesheet" href="screen3.css">
+    <link rel="stylesheet" href="screen4.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-     <img id="text" src="/assets/screen3/text.png" alt="title">
-     <div id="fooditems">
-        <img id="topImage" src="/assets/screen2/food.png" alt="food">
-        <img id="bottomImage" src="/assets/screen2/foodHover.png" alt="foodhover">
-     </div>
-     <button class="buttoncontainer" id="screen3button">
+     <img id="text" src="/assets/screen4/text.png" alt="title">
+     <div id="circles">
+        <div class="circle" id="circle1"></div>
+            <img class="topImage" src="/assets/screen4/click.png" alt="food">
+            <img class="bottomImage" src="/assets/screen4/circletext1.png" alt="foodhover">
+        </div>
+        <div class="circle" id="circle2"></div>
+            <img class="topImage" src="/assets/screen4/click.png" alt="food">
+            <img class="bottomImage" src="/assets/screen4/circletext2.png" alt="foodhover">
+        </div>
+        <div class="circle" id="circle3"></div>
+            <img class="topImage" src="/assets/screen4/click.png" alt="food">
+            <img class="bottomImage" src="/assets/screen4/circletext3.png" alt="foodhover">
+        </div>
+    </div>
+     <button class="buttoncontainer" id="screen4button">
          <img id="nextButton" src="/assets/screen2/nextButton.png" alt="nextButton">
     </button>
-    <img id="pageIndicator" src="/assets/screen2/pageIndicator.png" alt="pageIndicator">
+    <img id="pageIndicator" src="/assets/screen4/pageIndicator.png" alt="pageIndicator">
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const topImages = document.querySelectorAll('.topImage');
+            const bottomImages = document.querySelectorAll('.bottomImage');
+
+            topImages.forEach((topImage, index) => {
+                topImage.addEventListener('click', function() {
+                    topImage.style.display = 'none';
+                    if (bottomImages[index]) {
+                        bottomImages[index].style.display = 'block';
+                    }
+                });
+            });
+        });
+        </script>
     <audio id="hoverSound" src="/assets/silence.mp3" preload="auto"></audio>
 
      

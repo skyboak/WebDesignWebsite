@@ -3,8 +3,8 @@
     top: 6vh;
     left: 6vw;
     width: 45vw;
-
 }
+
 #nextButton {
     position: fixed;
     left: 7vw;
@@ -12,19 +12,12 @@
     height: 5vh;
     width: 7vw;
 }
+
 #nextButton:hover {
     animation: shake 0.5s infinite;
 }
-#fooditems {
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
-#fooditems img{
-    width: 100%;
-}
-#topImage{
-    animation: bounce 2.3s ease-in-out infinite;
+#circles {
+    display: flex;
+    flex-direction: row;
 }
