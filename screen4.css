@@ -14,7 +14,8 @@
     position: fixed;
     width: 10vw; /* Adjust the width as needed */
     height: 10vw; /* Ensure the circle is proportional */
-
+    cursor: pointer;
+    
 }
 #circle1{
     top: 49vh;
@@ -32,9 +33,12 @@
     width: 100%;
 }
 
+.topImage{
 
+}
 .bottomImage{
     display: none;
+    cursor: default;
 }
 
 #creatures{
