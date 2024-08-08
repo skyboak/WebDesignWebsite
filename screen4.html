@@ -30,8 +30,10 @@
     <button class="buttoncontainer" id="screen4button">
         <img id="nextButton" src="/assets/screen2/nextButton.png" alt="nextButton">
     </button>
+    <button class="buttoncontainer" id="screen2button">
+        <img id="backButton" src="/assets/back.png" alt="backButton">
+   </button>
     
-    <img id="pageIndicator" src="/assets/screen4/pageIndicator.png" alt="pageIndicator">
     
     <script src="script.js"></script>
     <script>
@@ -68,7 +70,7 @@
             setInterval(() => {
                 currentIndex = (currentIndex + 1) % images.length;
                 creaturesImage.src = images[currentIndex];
-            }, 700); // Change image every 1 second
+            }, 400); // Change image every 1 second
         });
     </script>
     

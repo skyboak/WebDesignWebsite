@@ -26,9 +26,3 @@
     animation: shake 0.5s infinite;
 }
 
-#buttoncontainer {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-}

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             targetPage = 'screen7.html';
                         } else if (target.id === 'screen7button') {
                             console.log("screen7button clicked");
-                            targetPage = 'indexf.html';
+                            targetPage = 'index.html';
                         
                 
             } else {
